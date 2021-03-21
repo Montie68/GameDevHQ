@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     {
         // take the current Position  = new Position (0,0,0)
         gameObject.transform.position = new Vector3(0,0,0);
+        m_timeSinceLastLaser = Time.time; 
     }
 	
     void Update()
