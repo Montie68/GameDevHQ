@@ -13,8 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float m_speed = 3.5f;
     [SerializeField] GameObject m_laserPrefab = null;
     [SerializeField] Vector3 m_laserOffset = new Vector3();
-    [SerializeField] float m_laserCoolDown = 1f;
-    float m_timeSinceLastLaser = 0;
+    [SerializeField] float m_laserCoolDown = 0.15f;
+    float m_canFire = -1;
 
     #endregion
     // Place all unity Message Methods here like OnCollision, Update, Start ect. 
@@ -23,7 +23,6 @@ public class Player : MonoBehaviour
     {
         // take the current Position  = new Position (0,0,0)
         gameObject.transform.position = new Vector3(0,0,0);
-        m_timeSinceLastLaser = Time.time; 
     }
 	
     void Update()
@@ -40,11 +39,11 @@ public class Player : MonoBehaviour
     // Place your public methods here
     void FireLaser()
     {
-        if (m_timeSinceLastLaser < Time.time +  m_laserCoolDown) return;
+        if (Time.time <  m_canFire) return;
         if (Input.GetKeyDown(KeyCode.Space)) 
         {
             Instantiate(m_laserPrefab, transform.position + m_laserOffset, Quaternion.identity);
-            m_timeSinceLastLaser = Time.time;
+            m_canFire = Time.time + m_laserCoolDown;
         }
     }
     void CalcMovement()
