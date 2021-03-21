@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject m_laserPrefab = null;
     [SerializeField] Vector3 m_laserOffset = new Vector3();
     [SerializeField] float m_laserCoolDown = 1f;
+    float m_timeSinceLastLaser = 0;
+
     #endregion
     // Place all unity Message Methods here like OnCollision, Update, Start ect. 
     #region Unity Messages 
@@ -37,9 +39,11 @@ public class Player : MonoBehaviour
     // Place your public methods here
     void FireLaser()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (m_timeSinceLastLaser < Time.time +  m_laserCoolDown) return;
+        if (Input.GetKeyDown(KeyCode.Space)) 
         {
             Instantiate(m_laserPrefab, transform.position + m_laserOffset, Quaternion.identity);
+            m_timeSinceLastLaser = Time.time;
         }
     }
     void CalcMovement()
