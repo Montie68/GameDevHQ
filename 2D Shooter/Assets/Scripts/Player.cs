@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
     #region Private
     // private members go here
     [SerializeField] private float m_speed = 3.5f;
+    [SerializeField] GameObject m_laserPrefab = null;
+    [SerializeField] Vector3 m_laserOffset = new Vector3();
+    [SerializeField] float m_laserCoolDown = 1f;
     #endregion
     // Place all unity Message Methods here like OnCollision, Update, Start ect. 
     #region Unity Messages 
@@ -23,6 +26,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         CalcMovement();
+        FireLaser();
     }
     #endregion
     #region Public Methods
@@ -31,6 +35,13 @@ public class Player : MonoBehaviour
     #endregion
     #region Private Methods
     // Place your public methods here
+    void FireLaser()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(m_laserPrefab, transform.position + m_laserOffset, Quaternion.identity);
+        }
+    }
     void CalcMovement()
     {
         float horizontalInput = Input.GetAxis("Horizontal");

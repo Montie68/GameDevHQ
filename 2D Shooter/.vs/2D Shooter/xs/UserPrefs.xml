@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{94B959A6-B9EA-F53F-A2AE-D52A643BBC74}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Laser.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Player.cs" Line="40" Column="81" />
+      <File FileName="Assets/Scripts/Laser.cs" Line="8" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e180de3a-2293-420b-91a2-4b127b467cfb" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
