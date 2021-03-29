@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{94B959A6-B9EA-F53F-A2AE-D52A643BBC74}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Laser.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="40" Column="81" />
-      <File FileName="Assets/Scripts/Laser.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/Player.cs" Line="17" Column="47" />
+      <File FileName="Assets/Scripts/Laser.cs" Line="25" Column="2" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="8" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e180de3a-2293-420b-91a2-4b127b467cfb" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="591382a6-c921-4a2d-93a1-53ed5626ec5b" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
