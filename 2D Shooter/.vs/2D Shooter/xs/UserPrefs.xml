@@ -1,9 +1,8 @@
 ﻿<Properties StartupConfiguration="{94B959A6-B9EA-F53F-A2AE-D52A643BBC74}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Laser.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="17" Column="47" />
-      <File FileName="Assets/Scripts/Laser.cs" Line="25" Column="2" />
-      <File FileName="Assets/Scripts/Enemy.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/Player.cs" Line="74" Column="6" />
+      <File FileName="Assets/Scripts/Laser.cs" Line="24" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
