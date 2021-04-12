@@ -15,7 +15,8 @@ public class Player : MonoBehaviour
     [SerializeField] Vector3 m_laserOffset = new Vector3();
     [SerializeField] float m_laserCoolDown = 0.15f;
     public int m_DoesDamage = 25;
-    public int m_health = 10;
+    [SerializeField]
+    private int m_lives = 3;
     float m_canFire = -1;
 
     #endregion
@@ -35,7 +36,14 @@ public class Player : MonoBehaviour
     #endregion
     #region Public Methods
     // Place your public methods here
-
+    public void Damage()
+    {
+        m_lives--;
+        if (m_lives < 1)
+        {
+            Destroy(this.gameObject);
+        }
+    }
     #endregion
     #region Private Methods
     // Place your public methods here
@@ -48,6 +56,7 @@ public class Player : MonoBehaviour
             m_canFire = Time.time + m_laserCoolDown;
         }
     }
+
     void CalcMovement()
     {
         float horizontalInput = Input.GetAxis("Horizontal");

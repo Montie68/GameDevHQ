@@ -271,6 +271,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5489264598795449959, guid: f958ec0cfb8819d43aa21169951abc67,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489264598795449959, guid: f958ec0cfb8819d43aa21169951abc67,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f958ec0cfb8819d43aa21169951abc67, type: 3}
 --- !u!1 &1994201669
@@ -386,7 +396,7 @@ MonoBehaviour:
   m_laserOffset: {x: 0, y: 0.8, z: 0}
   m_laserCoolDown: 0.15
   m_DoesDamage: 25
-  m_health: 10
+  m_lives: 3
 --- !u!54 &1994201675
 Rigidbody:
   m_ObjectHideFlags: 0
