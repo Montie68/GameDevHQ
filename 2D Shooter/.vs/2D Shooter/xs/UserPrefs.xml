@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{94B959A6-B9EA-F53F-A2AE-D52A643BBC74}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Float2.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SpawnManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="44" Column="20" />
+      <File FileName="Assets/Scripts/Player.cs" Line="85" Column="1" />
       <File FileName="Assets/Scripts/Enemy.cs" Line="18" Column="53" />
-      <File FileName="Assets/Scripts/SpawnManager.cs" Line="32" Column="2" />
+      <File FileName="Assets/Scripts/SpawnManager.cs" Line="19" Column="75" />
       <File FileName="Assets/Scripts/Float2.cs" Line="58" Column="2" />
     </Files>
     <Pads>
@@ -12,7 +12,7 @@
           <Node name="2D Shooter" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Float2.cs" selected="True" />
+                <Node name="SpawnManager.cs" selected="True" />
               </Node>
             </Node>
           </Node>
