@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
 
         if (transform.position.y < -9.0f)
         {
-            transform.position = new Vector3(Random.Range(-8f,8f), 9f);
+            GameObject.Destroy(gameObject);
         }
     }
 

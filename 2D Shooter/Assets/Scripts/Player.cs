@@ -6,6 +6,9 @@ public class Player : MonoBehaviour
 {
     #region Public
     // public members go here
+    public delegate void OnPlayerDeath();
+
+    public static event OnPlayerDeath _playerDeath;
     #endregion
 
     #region Private
@@ -19,6 +22,7 @@ public class Player : MonoBehaviour
     private int m_lives = 3;
     float m_canFire = -1;
 
+    SpawnManager m_spawnManager;
     #endregion
     // Place all unity Message Methods here like OnCollision, Update, Start ect. 
     #region Unity Messages 
@@ -26,6 +30,15 @@ public class Player : MonoBehaviour
     {
         // take the current Position  = new Position (0,0,0)
         gameObject.transform.position = new Vector3(0,0,0);
+        try
+        {
+            m_spawnManager = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
+        }
+        catch
+        {
+            Debug.LogError("No spawn manager not found...");
+        }
+
     }
 	
     void Update()
@@ -41,6 +54,7 @@ public class Player : MonoBehaviour
         m_lives--;
         if (m_lives < 1)
         {
+            _playerDeath?.Invoke();
             Destroy(this.gameObject);
         }
     }

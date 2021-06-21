@@ -12,13 +12,18 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     private Transform m_enemyObjectContainer;
 
+    private bool m_stopSpawning = false;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(SpawnEnemy());
         if (m_enemyObjectContainer == null) m_enemyObjectContainer = this.transform;
+        Player._playerDeath += OnPlayerDeath;
     }
-
+    private void OnDestroy()
+    {
+        Player._playerDeath -= OnPlayerDeath; 
+    }
     // Update is called once per frame
     void Update()
     {
@@ -27,12 +32,17 @@ public class SpawnManager : MonoBehaviour
 
     private IEnumerator SpawnEnemy()
     {
-        while (Application.isPlaying)
+        while (!m_stopSpawning)
         {
             Vector3 pos = new Vector3( Random.Range(-8.0f, 8.0f), 9);
-            GameObject _enemy = Instantiate(m_enemyPrefab, pos, Quaternion.identity);
-            _enemy.transform.parent = m_enemyObjectContainer;
+            GameObject _newEnemy = Instantiate(m_enemyPrefab, pos, Quaternion.identity);
+            _newEnemy.transform.parent = m_enemyObjectContainer;
             yield return new WaitForSeconds(Random.Range(m_spawnRange.a, m_spawnRange.b));
         }
+    }
+
+    public void OnPlayerDeath()
+    {
+        m_stopSpawning = true;
     }
 }
