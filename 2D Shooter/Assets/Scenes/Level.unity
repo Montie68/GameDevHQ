@@ -265,8 +265,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_spawnRange:
     a: 1
-    b: 5
-  m_enemyPrefab: {fileID: 0}
+    b: 2.5
+  m_enemyPrefab: {fileID: 244125422713342323, guid: f958ec0cfb8819d43aa21169951abc67,
+    type: 3}
   m_enemyObjectContainer: {fileID: 831204417}
 --- !u!4 &891028502
 Transform:
